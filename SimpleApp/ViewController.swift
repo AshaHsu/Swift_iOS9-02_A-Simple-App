@@ -10,6 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet var upperView:UIView!
+    @IBOutlet var lowerView:UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +24,17 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func upperViewTapped(sender :UITapGestureRecognizer ) {
+        self.upperView.backgroundColor=UIColor.yellowColor()
+        self.lowerView.backgroundColor=UIColor.grayColor()
+
+    }
+   
+    @IBAction func lowerViewTapped(sender : UITapGestureRecognizer) {
+        self.lowerView.backgroundColor=UIColor.redColor()
+        self.upperView.backgroundColor=UIColor.grayColor()
+
+    }
 
 }
 
